@@ -1,0 +1,45 @@
+{
+  "name": "hero-plugins",
+  "version": "0.0.1",
+  "exports": {
+    "./*": "./dist/*.js"
+  },
+  "description": "monorepo for hero-plugins maintained by Otainsight",
+  "repository": "https://github.com/OTA-Insight/hero-plugins",
+  "author": "OTA Insight Ltd.",
+  "contributors": [
+    "brecht <brecht.stamper@gmail.com>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "rm": "rimraf dist",
+    "tsc-clean": "tsc -b --clean",
+    "clean": "yarn tsc-clean",
+    "compile": "tsc -b",
+    "build": "yarn clean && yarn compile && cp package.json dist/",
+    "watch": "yarn build && tsc -b -w",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix"
+  },
+  "packageManager": "yarn@3.3.0",
+  "dependencies": {
+    "@ulixee/hero": "2.0.0-alpha.19",
+    "@ulixee/hero-interfaces": "2.0.0-alpha.19",
+    "@ulixee/hero-plugin-utils": "2.0.0-alpha.19",
+    "@ulixee/unblocked-specification": "2.0.0-alpha.19"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.6",
+    "rimraf": "^4.4.0",
+    "typescript": "4.9.3"
+  }
+}

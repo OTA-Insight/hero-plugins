@@ -1,0 +1,7 @@
+node_modules
+dist
+src/playground/static
+**/*.test.ts
+**/*.js
+services/sandbox/src/scripts-templates/crawler.ts
+services/sandbox/src/scripts-generated/crawler.ts
