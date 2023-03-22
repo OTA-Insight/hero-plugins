@@ -2,6 +2,9 @@
   "name": "hero-plugins",
   "version": "0.0.1",
   "main": "index.js",
+  "exports": {
+    "./*": "./lib/*.js"
+  },
   "description": "monorepo for hero-plugins maintained by Otainsight",
   "repository": "https://github.com/OTA-Insight/hero-plugins",
   "author": "OTA Insight Ltd.",
@@ -14,10 +17,8 @@
   },
   "scripts": {
     "rm": "rimraf dist",
-    "tsc-clean": "tsc -b --clean",
-    "clean": "yarn tsc-clean",
     "compile": "tsc -b",
-    "build": "yarn clean && yarn compile && cp package.json dist/",
+    "build": "yarn rm && yarn compile",
     "watch": "yarn build && tsc -b -w",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix"
