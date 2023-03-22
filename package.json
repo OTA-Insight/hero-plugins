@@ -1,12 +1,7 @@
 {
   "name": "hero-plugins",
   "version": "0.0.1",
-  "main": "index.js",
   "exports": {
-    ".": {
-      "import": "./index.js",
-      "require": "./index.js"
-    },
     "./package.json": "./package.json",
     "./lib/*": "./lib/*.js"
   },
