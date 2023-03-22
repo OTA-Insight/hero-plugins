@@ -1,0 +1,42 @@
+{
+    "root": true,
+    
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "no-loops",
+        "prettier"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:import/recommended"
+    ],
+    "rules": {
+        "curly": "warn",
+        "camelcase": "error",
+        "no-console": 1,
+        "no-loops/no-loops": 0,
+        "prettier/prettier": 2,
+        "comma-dangle": ["error", "always-multiline"]
+    },
+    "overrides": [{
+        "rules": {
+            "@typescript-eslint/no-explicit-any": "off"
+        }
+    }],
+    // "settings": {
+    //     "import/parsers": {
+    //         "@typescript-eslint/parser": [".ts", ".tsx"]
+    //       },
+    //     "import/resolver": {
+    //         "typescript": {
+    //           "alwaysTryTypes": true,
+    //           "project": "tsconfig.json",
+    //         }
+    //       }
+    // },
+    
+}

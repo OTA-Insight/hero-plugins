@@ -1,0 +1,31 @@
+name: 'Publish a built Javascript Branch'
+
+on:
+  push:
+    branches:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Javascript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+      - name: Build modules
+        run: yarn && yarn build
+      - name: Publish branch
+        run: |
+          cd dist
+          git config --global user.email "ci_bot@otainsight.com"
+          git config --global user.name "CI_bot"
+          git init -b main
+          git add -A
+          git commit -m 'Auto-build Javascript files'
+          git push -f https://OTA-Insight:${{ env.GH_TOKEN }}@github.com/OTA-Insight/hero-plugins.git main:${{ github.ref_name }}-built-js
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
