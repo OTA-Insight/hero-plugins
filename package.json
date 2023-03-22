@@ -1,9 +1,7 @@
 {
   "name": "hero-plugins",
   "version": "0.0.1",
-  "exports": {
-    "./*": "./dist/*.js"
-  },
+  "main": "index.js",
   "description": "monorepo for hero-plugins maintained by Otainsight",
   "repository": "https://github.com/OTA-Insight/hero-plugins",
   "author": "OTA Insight Ltd.",
