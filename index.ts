@@ -8,5 +8,5 @@ declare module '@ulixee/hero/lib/extendables' {
   interface Hero extends IAnimations {}
 }
 
-export { ClientAnimationsPlugin, CoreAnimationsPlugin };
+export { IAnimations, ClientAnimationsPlugin, CoreAnimationsPlugin };
 export default { ClientAnimationsPlugin, CoreAnimationsPlugin };
