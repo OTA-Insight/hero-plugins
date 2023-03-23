@@ -6,6 +6,7 @@ import { ClientPlugin, CorePlugin } from '@ulixee/hero-plugin-utils';
 import type { IFrame } from '@ulixee/unblocked-specification/agent/browser/IFrame';
 import type IAnimations from '../interfaces/IAnimations';
 import { ACTION } from '../interfaces/IAnimations';
+import type { Tab } from '@ulixee/hero';
 const id = 'animations-plugin';
 
 export class ClientAnimationsPlugin extends ClientPlugin {
@@ -14,8 +15,19 @@ export class ClientAnimationsPlugin extends ClientPlugin {
     onHero(hero: Hero, sendToCore: ISendToCoreFn) {
         Object.keys(ACTION).forEach((action) => {
             const oneAction = {
-                [action]: function (frame?: IFrame | undefined): Promise<void> {
-                    return sendToCore(id, action, frame);
+                [action]: function (): Promise<void> {
+                    return sendToCore(id, action);
+                },
+            };
+            Object.assign(hero, oneAction);
+        });
+    }
+
+    onTab(hero: Hero, tab: Tab, sendToCore: ISendToCoreFn) {
+        Object.keys(ACTION).forEach((action) => {
+            const oneAction = {
+                [action]: function (): Promise<void> {
+                    return sendToCore(id, action);
                 },
             };
             Object.assign(hero, oneAction);
@@ -36,68 +48,54 @@ const disableCssString = `<style>
     }
 </style>` as const;
 
-export class CoreAnimationsPlugin extends CorePlugin implements IAnimations {
+export class CoreAnimationsPlugin extends CorePlugin {
     static readonly id = id;
 
     async onClientCommand(
         meta: IOnClientCommandMeta,
         action: ACTION,
-        frame?: IFrame,
     ) {
-        const frames = frame ? [frame] : meta.page.frames;
-        for (const frame of frames) {
-            await this[action](frame);
-        }
+        const frame = meta.page.mainFrame;
+        await this.inFrame(this, frame)[action]()
     }
 
-    async [ACTION.disableAnimations](frame: IFrame) {
-        await this.disableCssAnimations(frame);
-        // await this.pauseDebugger(frame);
-    }
-
-    async [ACTION.disableCssAnimations](frame: IFrame) {
-        const fn = (disableString: string) => {
-            document.body.outerHTML += disableString;
-        };
-        await this.executeFn(
-            ACTION.disableCssAnimations,
-            frame,
-            fn,
-            disableCssString,
-        );
-    }
-
-    // Currently doesn't work
-    async [ACTION.pauseDebugger](frame: IFrame) {
-        const page = frame.page
-        await page?.devtoolsSession.send('Debugger.enable');
-        await page?.devtoolsSession.send('Debugger.pause');
-    }
-
-    async [ACTION.enableAnimations](frame: IFrame) {
-        await this.enableCssAnimations(frame);
-        await this.resumeDebbuger(frame);
-    }
-
-    async [ACTION.enableCssAnimations](frame: IFrame) {
-        const fn = (disableString: string) => {
-            document.body.outerHTML = document.body.outerHTML.replace(
-                disableString,
-                '',
-            );
-        };
-        await this.executeFn(
-            ACTION.enableCssAnimations,
-            frame,
-            fn,
-            disableCssString,
-        );
-    }
-
-    async [ACTION.resumeDebbuger](frame: IFrame) {
-        const page = frame.page
-        await page?.devtoolsSession.send('Debugger.resume');
-    }
+    inFrame(parent: CoreAnimationsPlugin, frame: IFrame) {
+        return {
+            [ACTION.disableAnimations]: async function (): Promise<void> {
+                await this.disableCssAnimations();
+                // await this.pauseDebugger();
+            },
+            [ACTION.disableCssAnimations]: async function (): Promise<void> {
+                const fn = (disableString: string) => {
+                    document.body.outerHTML += disableString;
+                };
+                await parent.executeFn(
+                    ACTION.disableCssAnimations,
+                    frame,
+                    fn,
+                    disableCssString,
+                );
+            },
+            [ACTION.enableAnimations]: async function (): Promise<void> {
+                await this[ACTION.enableCssAnimations]()
+            },
+            [ACTION.enableCssAnimations]: async function (): Promise<void> {
+                const fn = (disableString: string) => {
+                    document.body.outerHTML = document.body.outerHTML.replace(
+                        disableString,
+                        '',
+                    );
+                };
+                await parent.executeFn(
+                    ACTION.enableCssAnimations,
+                    frame,
+                    fn,
+                    disableCssString,
+                );
+            },
+            
+        } satisfies IAnimations;
+    };
 
     async executeFn<T extends unknown[]>(
         action: ACTION,
@@ -120,6 +118,7 @@ export class CoreAnimationsPlugin extends CorePlugin implements IAnimations {
 
 declare module '@ulixee/hero/lib/extendables' {
     interface Hero extends IAnimations {}
+    interface Tab extends IAnimations {}
 }
 
 export default { ClientAnimationsPlugin, CoreAnimationsPlugin }
