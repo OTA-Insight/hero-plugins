@@ -1,5 +1,4 @@
-import '@ulixee/hero/lib/extendables';
-import type Hero from '@ulixee/hero';
+import type { Hero } from '@ulixee/hero/lib/extendables';
 import { ISendToCoreFn } from '@ulixee/hero-interfaces/IClientPlugin';
 import type { IOnClientCommandMeta } from '@ulixee/hero-interfaces/ICorePlugin';
 import { ClientPlugin, CorePlugin } from '@ulixee/hero-plugin-utils';
