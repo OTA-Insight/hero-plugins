@@ -1,4 +1,5 @@
 # hero-plugins
+<<<<<<< HEAD
 
 Plugins made to be used with [Ulixee Hero](https://github.com/ulixee/hero).
 
@@ -36,3 +37,8 @@ Currently there are no tests implemented. As this library grows/matures tests wi
 Contributions are welcome. Please, see [the CONTRIBUTING document](./CONTRIBUTING.md) for details.
 
 Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms. See [Contributor Code of Conduct](./CONTRIBUTING.md#contributor-code-of-conduct) for more information.
+=======
+Plugins made to be used with Ulixee Hero
+
+yarn dlx @yarnpkg/sdks
+>>>>>>> main

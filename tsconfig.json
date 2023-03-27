@@ -2,20 +2,35 @@
     "compilerOptions": {
         "outDir": "dist",
         "rootDir": ".",
+<<<<<<< HEAD
         "target": "es2018",
         "module": "commonjs",
+=======
+        "target": "ES2020",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+>>>>>>> main
         "lib": ["es2018"],
         "allowJs": true,
         "composite": true,
         "declaration": true,
         "declarationMap": true,
+<<<<<<< HEAD
         "esModuleInterop": true,
         "noImplicitAny": true,
         "resolveJsonModule": true,
+=======
+        "esModuleInterop": false,
+        "noImplicitAny": true,
+>>>>>>> main
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
         "incremental": true,
+<<<<<<< HEAD
+=======
+        "resolveJsonModule": true,
+>>>>>>> main
         "useUnknownInCatchVariables": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
