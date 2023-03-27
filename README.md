@@ -4,13 +4,32 @@ Plugins made to be used with [Ulixee Hero](https://github.com/ulixee/hero).
 
 ## Usage
 
-TODO:
-- How to install?
-- How to use/integrate?
+### Install
+Currently there is no npm version yet, to install use a built from a github `-js-branch`. 
+Add this in package.json, using a commit from a javascript built branch.
+```
+"hero-plugins": "https://github.com/OTA-Insight/hero-plugins.git#commit=dc2e3266bd7ccca1f2c92dd740552f33e8faddef",
+```
+
+### Usage
+Every plugin can be enabled separately in Hero using this code:
+```
+hero.use(require.resolve('hero-plugins/lib/Animations'));
+```
+For everything to work in typescript a bare import is needed, importing directly can also be done but then typings won't work across packages, so it is not recommended.
+```
+import 'hero-plugins/lib/Animations';
+```
+For plugin specific functionality see the interfaces folder.
+
+## Plugins
+### Animations
+Plugin that can be used to pause animations, mainly useful for taking screenshots. The way chrome takes screenshots, triggers animations again which could result in inconsistent images when screenshotting without this plugin.
+
+> WARNING: The current implementation is detectable by the webpage if they are looking at DOM changes.
 
 ## Testing
-
-Can we have tests? Yes? How? what?
+Currently there are no tests implemented. As this library grows/matures tests will be added.
 
 ## Contributing
 
