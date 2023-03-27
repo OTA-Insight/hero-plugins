@@ -2,10 +2,6 @@
   "name": "hero-plugins",
   "version": "0.0.1",
   "exports": {
-<<<<<<< HEAD
-    "./package.json": "./package.json",
-=======
->>>>>>> main
     "./lib/*": "./lib/*.js"
   },
   "description": "monorepo for hero-plugins maintained by Otainsight",
