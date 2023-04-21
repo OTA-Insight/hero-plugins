@@ -54,7 +54,7 @@ such as the fetched resources and socket information.
 Example usage:
 
 ```typescript
-const sessionDb = await hero.getSessionDb();
+const sessionDb = await hero.readSessionDb();
 
 const socketRecords = sessionDb.sockets.all();
 // ... e.g. can be used to store the relevant info from the sockets as TCP connections
