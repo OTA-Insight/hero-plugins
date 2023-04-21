@@ -2,41 +2,34 @@ import type { Hero } from '@ulixee/hero/lib/extendables';
 import { ClientPlugin } from '@ulixee/hero-plugin-utils';
 import type ISessionDb from '../interfaces/ISessionDb';
 import SessionDb from '@ulixee/hero-core/dbs/SessionDb';
+
 const id = 'session-db-plugin';
 
 export class ClientSessionDbPlugin extends ClientPlugin {
     static readonly id = id;
 
     onHero(hero: Hero) {
-        var sessionDb: SessionDb;
-        hero.readSessionDb = async function (): Promise<SessionDb> {
-            if (sessionDb) {
-                return sessionDb;
-            }
-            sessionDb = await getSessionDb(hero);
-            return sessionDb;
-        };
+        hero.readSessionDb = this.getSessionDb.bind(this, hero);
     }
 
     onTab(hero: Hero) {
-        var sessionDb: SessionDb;
-        hero.readSessionDb = async function (): Promise<SessionDb> {
-            if (sessionDb) {
-                return sessionDb;
-            }
-            sessionDb = await getSessionDb(hero);
-            return sessionDb;
-        };
+        hero.readSessionDb = this.getSessionDb.bind(this, hero);
     }
-}
 
-async function getSessionDb(hero: Hero): Promise<SessionDb> {
-    const sessionId = await hero.sessionId;
-    const sessionDb = new SessionDb(sessionId, {
-        readonly: true,
-        fileMustExist: true,
-    });
-    return sessionDb;
+    _sessionDb?: SessionDb;
+
+    private async getSessionDb(hero: Hero): Promise<SessionDb> {
+        if (this._sessionDb) {
+            return this._sessionDb;
+        }
+
+        const sessionId = await hero.sessionId;
+        this._sessionDb = new SessionDb(sessionId, {
+            readonly: true,
+            fileMustExist: true,
+        });
+        return this._sessionDb;
+    }
 }
 
 declare module '@ulixee/hero/lib/extendables' {
