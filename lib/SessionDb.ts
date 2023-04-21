@@ -1,10 +1,10 @@
 import type { Hero } from '@ulixee/hero/lib/extendables';
 import { ClientPlugin } from '@ulixee/hero-plugin-utils';
-import type ISessionTraffic from '../interfaces/ISessionDb';
+import type ISessionDb from '../interfaces/ISessionDb';
 import SessionDb from '@ulixee/hero-core/dbs/SessionDb';
-const id = 'animations-plugin';
+const id = 'session-db-plugin';
 
-export class ClientSessionTrafficPlugin extends ClientPlugin {
+export class ClientSessionDbPlugin extends ClientPlugin {
     static readonly id = id;
 
     onHero(hero: Hero) {
@@ -40,8 +40,8 @@ async function getSessionDb(hero: Hero): Promise<SessionDb> {
 }
 
 declare module '@ulixee/hero/lib/extendables' {
-    interface Hero extends ISessionTraffic { }
-    interface Tab extends ISessionTraffic { }
+    interface Hero extends ISessionDb { }
+    interface Tab extends ISessionDb { }
 }
 
-export default { ClientSessionTrafficPlugin }
+export default { ClientSessionDbPlugin }
