@@ -8,15 +8,11 @@ const id = 'session-db-plugin';
 export class ClientSessionDbPlugin extends ClientPlugin {
     static readonly id = id;
 
+    _sessionDb?: SessionDb;
+
     onHero(hero: Hero) {
         hero.readSessionDb = this.getSessionDb.bind(this, hero);
     }
-
-    onTab(hero: Hero) {
-        hero.readSessionDb = this.getSessionDb.bind(this, hero);
-    }
-
-    _sessionDb?: SessionDb;
 
     private async getSessionDb(hero: Hero): Promise<SessionDb> {
         if (this._sessionDb) {
@@ -34,7 +30,6 @@ export class ClientSessionDbPlugin extends ClientPlugin {
 
 declare module '@ulixee/hero/lib/extendables' {
     interface Hero extends ISessionDb { }
-    interface Tab extends ISessionDb { }
 }
 
 export default { ClientSessionDbPlugin }
