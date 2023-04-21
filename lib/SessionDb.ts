@@ -8,21 +8,35 @@ export class ClientSessionTrafficPlugin extends ClientPlugin {
     static readonly id = id;
 
     onHero(hero: Hero) {
-        hero.readSessionDb = this.readSessionDb.bind(this, hero);
+        var sessionDb: SessionDb;
+        hero.readSessionDb = async function (): Promise<SessionDb> {
+            if (sessionDb) {
+                return sessionDb;
+            }
+            sessionDb = await getSessionDb(hero);
+            return sessionDb;
+        };
     }
 
     onTab(hero: Hero) {
-        hero.readSessionDb = this.readSessionDb.bind(this, hero);
+        var sessionDb: SessionDb;
+        hero.readSessionDb = async function (): Promise<SessionDb> {
+            if (sessionDb) {
+                return sessionDb;
+            }
+            sessionDb = await getSessionDb(hero);
+            return sessionDb;
+        };
     }
+}
 
-    private async readSessionDb(hero: Hero): Promise<SessionDb> {
-        const sessionId = await hero.sessionId;
-        const sessionDb = new SessionDb(sessionId, {
-            readonly: true,
-            fileMustExist: true,
-        });
-        return sessionDb;
-    }
+async function getSessionDb(hero: Hero): Promise<SessionDb> {
+    const sessionId = await hero.sessionId;
+    const sessionDb = new SessionDb(sessionId, {
+        readonly: true,
+        fileMustExist: true,
+    });
+    return sessionDb;
 }
 
 declare module '@ulixee/hero/lib/extendables' {
