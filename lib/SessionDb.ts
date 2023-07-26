@@ -1,3 +1,5 @@
+import path from 'path';
+import HeroCore, { Session as HeroSession } from '@ulixee/hero-core';
 import type { Hero } from '@ulixee/hero/lib/extendables';
 import { ClientPlugin } from '@ulixee/hero-plugin-utils';
 import type ISessionDb from '../interfaces/ISessionDb';
@@ -20,7 +22,15 @@ export class ClientSessionDbPlugin extends ClientPlugin {
         }
 
         const sessionId = await hero.sessionId;
-        this._sessionDb = new SessionDb(sessionId, {
+        // TODO support using any location specified by hero constructor.
+        // Currently this info is not easy to get and would need a core plugin
+        // that keeps track of this (for a limited amount of time?) and some more.
+        const location = path.join(
+            HeroCore.dataDir,
+            'hero-sessions',
+            `${sessionId}.db`,
+        );
+        this._sessionDb = new SessionDb(sessionId, location, {
             readonly: true,
             fileMustExist: true,
         });
