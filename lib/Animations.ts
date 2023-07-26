@@ -92,7 +92,6 @@ export class CoreAnimationsPlugin extends CorePlugin {
                     disableCssString,
                 );
             },
-            
         } satisfies IAnimations;
     };
 

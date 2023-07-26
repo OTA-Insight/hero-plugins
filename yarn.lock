@@ -79,6 +79,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jridgewell/resolve-uri@npm:3.1.0":
+  version: 3.1.0
+  resolution: "@jridgewell/resolve-uri@npm:3.1.0"
+  checksum: b5ceaaf9a110fcb2780d1d8f8d4a0bfd216702f31c988d8042e5f8fbe353c55d9b0f55a1733afdc64806f8e79c485d2464680ac48a0d9fcadb9548ee6b81d267
+  languageName: node
+  linkType: hard
+
+"@jridgewell/sourcemap-codec@npm:1.4.14":
+  version: 1.4.14
+  resolution: "@jridgewell/sourcemap-codec@npm:1.4.14"
+  checksum: 61100637b6d173d3ba786a5dff019e1a74b1f394f323c1fee337ff390239f053b87266c7a948777f4b1ee68c01a8ad0ab61e5ff4abb5a012a0b091bec391ab97
+  languageName: node
+  linkType: hard
+
+"@jridgewell/trace-mapping@npm:^0.3.18":
+  version: 0.3.18
+  resolution: "@jridgewell/trace-mapping@npm:0.3.18"
+  dependencies:
+    "@jridgewell/resolve-uri": 3.1.0
+    "@jridgewell/sourcemap-codec": 1.4.14
+  checksum: 0572669f855260808c16fe8f78f5f1b4356463b11d3f2c7c0b5580c8ba1cbf4ae53efe9f627595830856e57dbac2325ac17eb0c3dd0ec42102e6f227cc289c02
+  languageName: node
+  linkType: hard
+
 "@leichtgewicht/ip-codec@npm:^2.0.1":
   version: 2.0.4
   resolution: "@leichtgewicht/ip-codec@npm:2.0.4"
@@ -165,6 +189,13 @@ __metadata:
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: e60b153664572116dfea673c5bda7778dbff150498f44f998e34b5886d8afc47f16799280e4b6e241c0472aef1bc36add771c569c68fc5125fc2ae519a3eb9ac
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.18":
+  version: 18.16.19
+  resolution: "@types/node@npm:18.16.19"
+  checksum: 63c31f09616508aa7135380a4c79470a897b75f9ff3a70eb069e534dfabdec3f32fb0f9df5939127f1086614d980ddea0fa5e8cc29a49103c4f74cd687618aaf
   languageName: node
   linkType: hard
 
@@ -305,12 +336,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ulixee/chrome-112-0@npm:^5615.121.7":
-  version: 5615.138.8
-  resolution: "@ulixee/chrome-112-0@npm:5615.138.8"
+"@ulixee/chrome-114-0@npm:^5735.91.8":
+  version: 5735.134.8
+  resolution: "@ulixee/chrome-114-0@npm:5735.134.8"
   dependencies:
     "@ulixee/chrome-app": ^1.0.3
-  checksum: 9f50f0c627306d8e20b702dc66883684ce7744219515840da56743532f1adc0ea2d0558e146249b5e9e52be738b056531ec75f3ba47833ffc572a4ecb00e7b8e
+  checksum: 652b91cd4b6e9acd07d0fbc415ffe5fd2827ebc8bc11164aef2cd77ab30fd043c155577470c6fdd986ec474543c743f9edbc8baeea49c41621769062129d029f
   languageName: node
   linkType: hard
 
@@ -327,202 +358,208 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ulixee/commons@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/commons@npm:2.0.0-alpha.20"
+"@ulixee/commons@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/commons@npm:2.0.0-alpha.23"
   dependencies:
+    "@jridgewell/trace-mapping": ^0.3.18
     bech32: ^2.0.0
-    devtools-protocol: ^0.0.981744
+    devtools-protocol: ^0.0.1137505
     https-proxy-agent: ^5.0.0
     semver: ^7.3.7
-    source-map-js: ^1.0.1
-  checksum: e0747208b52dd5c180674d380ae700bd5aa6344bc54a5a483d23c567920c5d6ab937a98d5d01f1df080fdf1c37ed1bae324760485a128084b772719792c25514
+  checksum: 2ce360b192886c33b55dad3fd6d58268bb638d9d500eaa82f0c09078a5a9585302bdf6657346f33cb4da9ca26e1415087eaefb5227c1579c2b4ce16a3ea0b670
   languageName: node
   linkType: hard
 
-"@ulixee/default-browser-emulator@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/default-browser-emulator@npm:2.0.0-alpha.20"
+"@ulixee/default-browser-emulator@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/default-browser-emulator@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/chrome-112-0": ^5615.121.7
     "@ulixee/chrome-app": ^1.0.3
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/real-user-agents": 2.0.0-alpha.20
-    "@ulixee/unblocked-agent-mitm-socket": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/real-user-agents": 2.0.0-alpha.23
+    "@ulixee/unblocked-agent-mitm-socket": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
     compare-versions: ^3.6.0
-    nanoid: ^3.1.30
+    nanoid: ^3.3.6
     tough-cookie: ^4.0.0
     ua-parser-js: ^0.7.22
-  checksum: 10ccfe2d2c088bb1f6f2622f6b00a266e0126327ceb78067e3bc8eaa7c187c821e748b1b427b480cc43eed95b6ba8c6218bb5d0d49d25d54ecaee4497b75a08c
+  checksum: c06f5c6f9ce753edc32cb8dcf0587f4ec011d87ec91f0fe42b3b2713702f3bdc558dda37affad353b45c676bda57a2e411247d076474ccb48ec07257bd93ad7d
   languageName: node
   linkType: hard
 
-"@ulixee/default-human-emulator@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/default-human-emulator@npm:2.0.0-alpha.20"
+"@ulixee/default-human-emulator@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/default-human-emulator@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
-  checksum: 7b6656b1cdd8fe3d060ec885e645465da03ecd7c81033ec4b5214624728a7abdd9136961dd4917e34aabfac771472bfb1d385c5f3d97ac97b0d64270f9ddc116
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
+  checksum: da0c0bce9c9c5f35452b7e3deb9c4402c1e9458c762cac7984f358edc8bed89a9de79c969e31cbb8f922cd9acc2f518261db2375d0a603b80ae65c489b149587
   languageName: node
   linkType: hard
 
-"@ulixee/hero-core@npm:2.0.0-alpha.20, @ulixee/hero-core@npm:~2.0.0-alpha.19":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/hero-core@npm:2.0.0-alpha.20"
+"@ulixee/hero-core@npm:2.0.0-alpha.23, @ulixee/hero-core@npm:~2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/hero-core@npm:2.0.0-alpha.23"
   dependencies:
     "@ulixee/awaited-dom": 1.4.2
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/default-browser-emulator": 2.0.0-alpha.20
-    "@ulixee/default-human-emulator": 2.0.0-alpha.20
-    "@ulixee/hero-interfaces": 2.0.0-alpha.20
-    "@ulixee/hero-plugin-utils": 2.0.0-alpha.20
-    "@ulixee/hero-timetravel": 2.0.0-alpha.20
-    "@ulixee/js-path": 2.0.0-alpha.20
-    "@ulixee/net": 2.0.0-alpha.20
-    "@ulixee/unblocked-agent": 2.0.0-alpha.20
-    "@ulixee/unblocked-agent-mitm": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
-    better-sqlite3: ^8.0.1
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/default-browser-emulator": 2.0.0-alpha.23
+    "@ulixee/default-human-emulator": 2.0.0-alpha.23
+    "@ulixee/hero-interfaces": 2.0.0-alpha.23
+    "@ulixee/hero-plugin-utils": 2.0.0-alpha.23
+    "@ulixee/hero-timetravel": 2.0.0-alpha.23
+    "@ulixee/js-path": 2.0.0-alpha.23
+    "@ulixee/net": 2.0.0-alpha.23
+    "@ulixee/unblocked-agent": 2.0.0-alpha.23
+    "@ulixee/unblocked-agent-mitm": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
+    better-sqlite3: ^8.4.0
     moment: ^2.29.4
-    nanoid: ^3.1.30
+    nanoid: ^3.3.6
     ws: ^7.4.6
-  checksum: 4558f540fbeab15477659ab5282425f8cd5f55333503db42621b81380183cca65cef7504e112afef4c5c69fb5577780cf437f9743468cfc6db0e5b2428096f69
+  checksum: 3e0fbf886da90ee796b20db76b7a4f11f009a82efb777a3c0ccd63d51b933f960a9276961509c0c1445245771b4f77e0cb1e7f61bb067969516a169f4cc9b5c8
   languageName: node
   linkType: hard
 
-"@ulixee/hero-interfaces@npm:2.0.0-alpha.20, @ulixee/hero-interfaces@npm:~2.0.0-alpha.19":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/hero-interfaces@npm:2.0.0-alpha.20"
+"@ulixee/hero-interfaces@npm:2.0.0-alpha.23, @ulixee/hero-interfaces@npm:~2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/hero-interfaces@npm:2.0.0-alpha.23"
   dependencies:
     "@ulixee/awaited-dom": 1.4.2
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/js-path": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/js-path": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
     devtools-protocol: ^0.0.981744
-  checksum: 10a20b97fa206ea46d31ca9b45d449f2a9328f7acbd4057ce13baeaaa0f1d9f6fc9095f9b4e9ac9b9b2e9616cee0734a5219a7fe690284285423dc2e5443ed92
+  checksum: 15bc8a8eea3a409747d14b1d4f9a5913a98781597c0bb29a5d90bea92aaae99e7ba01c0bb71866b36066d5cb715f97569cb744151417cc82deca90a223f2b7ed
   languageName: node
   linkType: hard
 
-"@ulixee/hero-plugin-utils@npm:2.0.0-alpha.20, @ulixee/hero-plugin-utils@npm:~2.0.0-alpha.19":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/hero-plugin-utils@npm:2.0.0-alpha.20"
+"@ulixee/hero-plugin-utils@npm:2.0.0-alpha.23, @ulixee/hero-plugin-utils@npm:~2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/hero-plugin-utils@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/hero-interfaces": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
-  checksum: 770ad152d8907a86719212608024be178235d2cea82d49f4a74a78ab5e253973c6639ea11e81741a1180d8bc4d2da66a4f90eb27fd130d1ab7d5e896f9bebe0e
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/hero-interfaces": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
+  checksum: ff8ff77642184b91595df60d80c4ec9513b3ebe7dd8c9d294686079d798a5c8ba50d93cb6fd3647bf5b8b14e47f8763c329f6a5d4b3542e7b2314204c7252ddf
   languageName: node
   linkType: hard
 
-"@ulixee/hero-timetravel@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/hero-timetravel@npm:2.0.0-alpha.20"
+"@ulixee/hero-timetravel@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/hero-timetravel@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/hero-core": 2.0.0-alpha.20
-    "@ulixee/hero-interfaces": 2.0.0-alpha.20
-    "@ulixee/unblocked-agent": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
-    nanoid: ^3.1.30
-  checksum: 589d171422505ad6c37212148984c0c1dee67c86231ae30bc8052db1b15e24de51f6bd24969d045f2398f55dd59bb597781d05987571f1b8829111581b4102cf
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/hero-core": 2.0.0-alpha.23
+    "@ulixee/hero-interfaces": 2.0.0-alpha.23
+    "@ulixee/unblocked-agent": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
+    nanoid: ^3.3.6
+  checksum: 5ce2e5215cb8290ea9a939307c44be549749201efb774766a94def387b531d31011675a6ad6cbe6f487a0611efbb704b82ffe935129006ab395cbb719cec1d56
   languageName: node
   linkType: hard
 
-"@ulixee/hero@npm:~2.0.0-alpha.19":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/hero@npm:2.0.0-alpha.20"
+"@ulixee/hero@npm:~2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/hero@npm:2.0.0-alpha.23"
   dependencies:
     "@ulixee/awaited-dom": 1.4.2
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/hero-interfaces": 2.0.0-alpha.20
-    "@ulixee/hero-plugin-utils": 2.0.0-alpha.20
-    "@ulixee/js-path": 2.0.0-alpha.20
-    "@ulixee/net": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/hero-interfaces": 2.0.0-alpha.23
+    "@ulixee/hero-plugin-utils": 2.0.0-alpha.23
+    "@ulixee/js-path": 2.0.0-alpha.23
+    "@ulixee/net": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
     linkedom: ^0.14.11
-  checksum: e80679160136c291402fd28ff9058c3f5f69f79fe766ffdb3c2c4b08ce9d491b13e65b3e087df5c2f3cc9e09a877931ccc46a67dfd56ce82e124c94575066a79
+  checksum: 014fa854714c90ddc3e2774052524a84c93b1a4c1de39f2652234c56f2b2b469c2dbefd6c24d4069f7a227d53731f44f5915b9413324e2cdee0f299e29afd368
   languageName: node
   linkType: hard
 
-"@ulixee/js-path@npm:2.0.0-alpha.20, @ulixee/js-path@npm:^2.0.0-alpha.18":
+"@ulixee/js-path@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/js-path@npm:2.0.0-alpha.23"
+  checksum: c01a0a8d061681a3c73e62299cc8d527c1f0971fdda439d726cd90d5aea55384d16e803de3583641dd7cce3a12b50609af343279d1724c4725d160d25990d6eb
+  languageName: node
+  linkType: hard
+
+"@ulixee/js-path@npm:^2.0.0-alpha.18":
   version: 2.0.0-alpha.20
   resolution: "@ulixee/js-path@npm:2.0.0-alpha.20"
   checksum: e9ffb3c7ff6b63296e76e1525f699636f6fb1969cd7562284fde26f0a2fef9cbace75697c28480a2eab94fcd098bd1b80590edddb7ce7b5d4f5428d2f869aa7b
   languageName: node
   linkType: hard
 
-"@ulixee/net@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/net@npm:2.0.0-alpha.20"
+"@ulixee/net@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/net@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/commons": 2.0.0-alpha.20
+    "@ulixee/commons": 2.0.0-alpha.23
     ws: ^7.4.6
-  checksum: e2aa8d651338c193c6bc2e3924b1bf780f754561d1b450eacaa031a4d03ff5a5e6cfb6cdf8815d7648c809751e5cfb5de35cd0d3b6c3d55eaf92cef6c2689b10
+  checksum: f2cb245c34b592008a3b8cab9c53900ae4e10d8683d79eca812b0373503af99a2520c9e6586184626ee7481d05bed06c351c59591f03aa9f7ccf8381277ed6a2
   languageName: node
   linkType: hard
 
-"@ulixee/real-user-agents@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/real-user-agents@npm:2.0.0-alpha.20"
+"@ulixee/real-user-agents@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/real-user-agents@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
     compare-versions: ^3.6.0
     ua-parser-js: ^0.7.24
-  checksum: d7bb170b70352ebce950a77d18d80254371386b5e226554b724ac2b44abcdd2161e71d27da3f28dc6a9cd8f714d7f858d8df0a24f5c8ca9d0f756d8c874fc6b9
+  checksum: e39d3f0aaddcf7e051c51ca8ad6eb180ff406a36e5e96cce392bf309923fc8f87a3b2840bc50f90e6d8020122648b27cba9f0ccf45605c3d1e1fe134077ea665
   languageName: node
   linkType: hard
 
-"@ulixee/unblocked-agent-mitm-socket@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/unblocked-agent-mitm-socket@npm:2.0.0-alpha.20"
+"@ulixee/unblocked-agent-mitm-socket@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/unblocked-agent-mitm-socket@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
-    nanoid: ^3.1.30
-  checksum: 11063bb66f262e525d55c95e16cc1c6bf4c3d9f76b477f606e5a63eea4ff359662b1a758bf0f63e1590f3ac04c8ff8261b3bf856e4725466f4c70505eb00669b
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
+    nanoid: ^3.3.6
+  checksum: 4ce68fa51346da31d13aaf3b94f55a4e5982144e86021ee66a1152f104f578b5bf2749f8a4b67d379df89e87d0f3e80f26f247b6f9d353c39fb4e888e18f7fed
   languageName: node
   linkType: hard
 
-"@ulixee/unblocked-agent-mitm@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/unblocked-agent-mitm@npm:2.0.0-alpha.20"
+"@ulixee/unblocked-agent-mitm@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/unblocked-agent-mitm@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/unblocked-agent-mitm-socket": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/unblocked-agent-mitm-socket": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
     dns-packet: ^5.2.4
     moment: ^2.29.4
-  checksum: 447aa72b0fc5d25e204e42288feabe5e51099688bfae219eaeaf909f9fe856b76fe01df4c4846eb3afbe1ea72c52d72595f2a6fe91f3c0d39d92db42a2f40c07
+  checksum: c7672b46ebb2a62e40a78805407fcac37fab118ac814d86a04c9fd8989e2a25aa98ce15621fd24fe49b916469d1a0e8d0a5bae1b0925713642ee6aa207761e5d
   languageName: node
   linkType: hard
 
-"@ulixee/unblocked-agent@npm:2.0.0-alpha.20":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/unblocked-agent@npm:2.0.0-alpha.20"
+"@ulixee/unblocked-agent@npm:2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/unblocked-agent@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/chrome-112-0": ^5615.121.7
+    "@ulixee/chrome-114-0": ^5735.91.8
     "@ulixee/chrome-app": ^1.0.3
-    "@ulixee/commons": 2.0.0-alpha.20
-    "@ulixee/js-path": 2.0.0-alpha.20
-    "@ulixee/unblocked-agent-mitm": 2.0.0-alpha.20
-    "@ulixee/unblocked-specification": 2.0.0-alpha.20
+    "@ulixee/commons": 2.0.0-alpha.23
+    "@ulixee/js-path": 2.0.0-alpha.23
+    "@ulixee/unblocked-agent-mitm": 2.0.0-alpha.23
+    "@ulixee/unblocked-specification": 2.0.0-alpha.23
     devtools-protocol: ^0.0.981744
-    nanoid: ^3.3.3
+    nanoid: ^3.3.6
     tough-cookie: ^4.0.0
-  checksum: 987ec76ddf524d0aa5fc00c5e1f015dc2a8947ee9669e1adfa66d1e8857da5fb5e2c2443f3bc3128c34a8e12919a91b104e97d7a484fe794131f77f7c0774bc7
+  checksum: 5f9de6c699822016540b1377b9b150543139e6199900dfa3070ef91bea9cfde8b9bedd44a855c92d67f718aeb7e2b8cb8abdb13eea8d6db3f3916332369e3784
   languageName: node
   linkType: hard
 
-"@ulixee/unblocked-specification@npm:2.0.0-alpha.20, @ulixee/unblocked-specification@npm:~2.0.0-alpha.19":
-  version: 2.0.0-alpha.20
-  resolution: "@ulixee/unblocked-specification@npm:2.0.0-alpha.20"
+"@ulixee/unblocked-specification@npm:2.0.0-alpha.23, @ulixee/unblocked-specification@npm:~2.0.0-alpha.23":
+  version: 2.0.0-alpha.23
+  resolution: "@ulixee/unblocked-specification@npm:2.0.0-alpha.23"
   dependencies:
-    "@ulixee/js-path": 2.0.0-alpha.20
+    "@ulixee/js-path": 2.0.0-alpha.23
     devtools-protocol: ^0.0.981744
-  checksum: 20bbb1efac8bd6292ef47bbd750760a366333c25a5e2f3fcf5ea886c30a9c799d936ce34cf16257430f1247c0ee52dda589ea47e3e8a1c2c50a4e376db58ea6b
+  checksum: 692a7d7e6286bc9a229759e51d3827e0d52e74531ed937ee4b3123a1a447f1d6d16e69d43af223daa14086d7a320d00d765d22e4f3912b0f540ee67ac4b62386
   languageName: node
   linkType: hard
 
@@ -715,14 +752,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"better-sqlite3@npm:^8.0.1":
-  version: 8.3.0
-  resolution: "better-sqlite3@npm:8.3.0"
+"better-sqlite3@npm:^8.4.0":
+  version: 8.4.0
+  resolution: "better-sqlite3@npm:8.4.0"
   dependencies:
     bindings: ^1.5.0
     node-gyp: latest
     prebuild-install: ^7.1.0
-  checksum: 00fc9f12058d2d157f56fe57b0f5c8ba705aee22a1dfe33ef8f60755531eda8f809cdb2377af314f6ed9396ad036094576e0596649bd6ca5bcaec172613e2dc9
+  checksum: f8b180c26428a2d381482e83b4519d0d81a918e00f92cafd255f42eb9583f49b2fed1015121ad49ebe1f3f790cc8c6f4697d1e805193d65e70dacf2e8abbd6af
   languageName: node
   linkType: hard
 
@@ -1028,6 +1065,13 @@ __metadata:
   version: 2.0.1
   resolution: "detect-libc@npm:2.0.1"
   checksum: ccb05fcabbb555beb544d48080179c18523a343face9ee4e1a86605a8715b4169f94d663c21a03c310ac824592f2ba9a5270218819bb411ad7be578a527593d7
+  languageName: node
+  linkType: hard
+
+"devtools-protocol@npm:^0.0.1137505":
+  version: 0.0.1137505
+  resolution: "devtools-protocol@npm:0.0.1137505"
+  checksum: 3f7d701a86f3744833d92bf31681cbf91379facc01ace569748ba74b29f114bd4827aa4ce3c36885a8f2aebe5b7189be4475a0316a8dfa379c64e568b9abe0ab
   languageName: node
   linkType: hard
 
@@ -1880,13 +1924,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hero-plugins@workspace:."
   dependencies:
+    "@types/node": ^18.11.18
     "@typescript-eslint/eslint-plugin": ^5.56.0
     "@typescript-eslint/parser": ^5.56.0
-    "@ulixee/hero": ~2.0.0-alpha.19
-    "@ulixee/hero-core": ~2.0.0-alpha.19
-    "@ulixee/hero-interfaces": ~2.0.0-alpha.19
-    "@ulixee/hero-plugin-utils": ~2.0.0-alpha.19
-    "@ulixee/unblocked-specification": ~2.0.0-alpha.19
+    "@ulixee/hero": ~2.0.0-alpha.23
+    "@ulixee/hero-core": ~2.0.0-alpha.23
+    "@ulixee/hero-interfaces": ~2.0.0-alpha.23
+    "@ulixee/hero-plugin-utils": ~2.0.0-alpha.23
+    "@ulixee/unblocked-specification": ~2.0.0-alpha.23
     eslint: ^8.36.0
     eslint-import-resolver-typescript: ^3.5.3
     eslint-plugin-import: ^2.27.5
@@ -2556,16 +2601,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.30":
-  version: 3.3.4
-  resolution: "nanoid@npm:3.3.4"
-  bin:
-    nanoid: bin/nanoid.cjs
-  checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^3.3.3":
+"nanoid@npm:^3.3.6":
   version: 3.3.6
   resolution: "nanoid@npm:3.3.6"
   bin:
@@ -3202,13 +3238,6 @@ __metadata:
     ip: ^2.0.0
     smart-buffer: ^4.2.0
   checksum: 259d9e3e8e1c9809a7f5c32238c3d4d2a36b39b83851d0f573bfde5f21c4b1288417ce1af06af1452569cd1eb0841169afd4998f0e04ba04656f6b7f0e46d748
-  languageName: node
-  linkType: hard
-
-"source-map-js@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "source-map-js@npm:1.0.2"
-  checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
   languageName: node
   linkType: hard
 

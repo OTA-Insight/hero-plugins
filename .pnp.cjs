@@ -28,13 +28,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/node", "npm:18.16.19"],\
             ["@typescript-eslint/eslint-plugin", "virtual:49b2612ea94d6295c6332969f4484a9516dc85e12006855e347f044dc1803778635233e5ca8484f2dd4f9df1d1cdfabc7d259e724ca6d12bfba92e117fe3db95#npm:5.59.0"],\
             ["@typescript-eslint/parser", "virtual:49b2612ea94d6295c6332969f4484a9516dc85e12006855e347f044dc1803778635233e5ca8484f2dd4f9df1d1cdfabc7d259e724ca6d12bfba92e117fe3db95#npm:5.59.0"],\
-            ["@ulixee/hero", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-core", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/hero", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-core", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
             ["eslint", "npm:8.38.0"],\
             ["eslint-import-resolver-typescript", "virtual:49b2612ea94d6295c6332969f4484a9516dc85e12006855e347f044dc1803778635233e5ca8484f2dd4f9df1d1cdfabc7d259e724ca6d12bfba92e117fe3db95#npm:3.5.5"],\
             ["eslint-plugin-import", "virtual:49b2612ea94d6295c6332969f4484a9516dc85e12006855e347f044dc1803778635233e5ca8484f2dd4f9df1d1cdfabc7d259e724ca6d12bfba92e117fe3db95#npm:2.27.5"],\
@@ -144,6 +145,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@jridgewell/resolve-uri", [\
+        ["npm:3.1.0", {\
+          "packageLocation": "./.yarn/cache/@jridgewell-resolve-uri-npm-3.1.0-6ff2351e61-b5ceaaf9a1.zip/node_modules/@jridgewell/resolve-uri/",\
+          "packageDependencies": [\
+            ["@jridgewell/resolve-uri", "npm:3.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@jridgewell/sourcemap-codec", [\
+        ["npm:1.4.14", {\
+          "packageLocation": "./.yarn/cache/@jridgewell-sourcemap-codec-npm-1.4.14-f5f0630788-61100637b6.zip/node_modules/@jridgewell/sourcemap-codec/",\
+          "packageDependencies": [\
+            ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@jridgewell/trace-mapping", [\
+        ["npm:0.3.18", {\
+          "packageLocation": "./.yarn/cache/@jridgewell-trace-mapping-npm-0.3.18-cd96571385-0572669f85.zip/node_modules/@jridgewell/trace-mapping/",\
+          "packageDependencies": [\
+            ["@jridgewell/trace-mapping", "npm:0.3.18"],\
+            ["@jridgewell/resolve-uri", "npm:3.1.0"],\
+            ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@leichtgewicht/ip-codec", [\
         ["npm:2.0.4", {\
           "packageLocation": "./.yarn/cache/@leichtgewicht-ip-codec-npm-2.0.4-dd4d657af8-468de1f04d.zip/node_modules/@leichtgewicht/ip-codec/",\
@@ -244,6 +274,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-e60b153664.zip/node_modules/@types/json5/",\
           "packageDependencies": [\
             ["@types/json5", "npm:0.0.29"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/node", [\
+        ["npm:18.16.19", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.16.19-aada4da69c-63c31f0961.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:18.16.19"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -477,11 +516,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@ulixee/chrome-112-0", [\
-        ["npm:5615.138.8", {\
-          "packageLocation": "./.yarn/unplugged/@ulixee-chrome-112-0-npm-5615.138.8-51746fa468/node_modules/@ulixee/chrome-112-0/",\
+      ["@ulixee/chrome-114-0", [\
+        ["npm:5735.134.8", {\
+          "packageLocation": "./.yarn/unplugged/@ulixee-chrome-114-0-npm-5735.134.8-1c027559da/node_modules/@ulixee/chrome-114-0/",\
           "packageDependencies": [\
-            ["@ulixee/chrome-112-0", "npm:5615.138.8"],\
+            ["@ulixee/chrome-114-0", "npm:5735.134.8"],\
             ["@ulixee/chrome-app", "npm:1.0.3"]\
           ],\
           "linkType": "HARD"\
@@ -500,32 +539,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ulixee/commons", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-commons-npm-2.0.0-alpha.20-55ee81d774-e0747208b5.zip/node_modules/@ulixee/commons/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-commons-npm-2.0.0-alpha.23-6a8ba36f11-2ce360b192.zip/node_modules/@ulixee/commons/",\
           "packageDependencies": [\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@jridgewell/trace-mapping", "npm:0.3.18"],\
             ["bech32", "npm:2.0.0"],\
-            ["devtools-protocol", "npm:0.0.981744"],\
+            ["devtools-protocol", "npm:0.0.1137505"],\
             ["https-proxy-agent", "npm:5.0.1"],\
-            ["semver", "npm:7.5.0"],\
-            ["source-map-js", "npm:1.0.2"]\
+            ["semver", "npm:7.5.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/default-browser-emulator", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-default-browser-emulator-npm-2.0.0-alpha.20-1816d40b70-10ccfe2d2c.zip/node_modules/@ulixee/default-browser-emulator/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-default-browser-emulator-npm-2.0.0-alpha.23-f2273bdd4b-c06f5c6f9c.zip/node_modules/@ulixee/default-browser-emulator/",\
           "packageDependencies": [\
-            ["@ulixee/default-browser-emulator", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/chrome-112-0", "npm:5615.138.8"],\
+            ["@ulixee/default-browser-emulator", "npm:2.0.0-alpha.23"],\
             ["@ulixee/chrome-app", "npm:1.0.3"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/real-user-agents", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-agent-mitm-socket", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/real-user-agents", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-agent-mitm-socket", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
             ["compare-versions", "npm:3.6.0"],\
-            ["nanoid", "npm:3.3.4"],\
+            ["nanoid", "npm:3.3.6"],\
             ["tough-cookie", "npm:4.1.2"],\
             ["ua-parser-js", "npm:0.7.35"]\
           ],\
@@ -533,95 +571,95 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ulixee/default-human-emulator", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-default-human-emulator-npm-2.0.0-alpha.20-4bcf2083cd-7b6656b1cd.zip/node_modules/@ulixee/default-human-emulator/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-default-human-emulator-npm-2.0.0-alpha.23-18649d924f-da0c0bce9c.zip/node_modules/@ulixee/default-human-emulator/",\
           "packageDependencies": [\
-            ["@ulixee/default-human-emulator", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"]\
+            ["@ulixee/default-human-emulator", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/hero", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-hero-npm-2.0.0-alpha.20-afa3fefbbe-e806791601.zip/node_modules/@ulixee/hero/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-hero-npm-2.0.0-alpha.23-9500ddcc41-014fa85471.zip/node_modules/@ulixee/hero/",\
           "packageDependencies": [\
-            ["@ulixee/hero", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/hero", "npm:2.0.0-alpha.23"],\
             ["@ulixee/awaited-dom", "npm:1.4.2"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/js-path", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/net", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/js-path", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/net", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
             ["linkedom", "npm:0.14.25"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/hero-core", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-hero-core-npm-2.0.0-alpha.20-25fb8b2e48-4558f540fb.zip/node_modules/@ulixee/hero-core/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-hero-core-npm-2.0.0-alpha.23-90832b2033-3e0fbf886d.zip/node_modules/@ulixee/hero-core/",\
           "packageDependencies": [\
-            ["@ulixee/hero-core", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/hero-core", "npm:2.0.0-alpha.23"],\
             ["@ulixee/awaited-dom", "npm:1.4.2"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/default-browser-emulator", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/default-human-emulator", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-timetravel", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/js-path", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/net", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-agent", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-agent-mitm", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
-            ["better-sqlite3", "npm:8.3.0"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/default-browser-emulator", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/default-human-emulator", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-timetravel", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/js-path", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/net", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-agent", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-agent-mitm", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
+            ["better-sqlite3", "npm:8.4.0"],\
             ["moment", "npm:2.29.4"],\
-            ["nanoid", "npm:3.3.4"],\
-            ["ws", "virtual:ca6e8d0759bf7852cf40307b391c6812192f9ed446167c2cf01419148b97dc6ca8c4cb82be9f726551b9ec70b5159fa51124df2d799a3187457815b15c907060#npm:7.5.9"]\
+            ["nanoid", "npm:3.3.6"],\
+            ["ws", "virtual:68d24c0cba563ee5355ebff18e7ff27257219d3ee3739717abb635de4c2ba66bf30441127c269cc32ed92bbf852f153ecf6bfe879c61b03664379bdd5b8ee176#npm:7.5.9"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/hero-interfaces", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-hero-interfaces-npm-2.0.0-alpha.20-be2e7c3f56-10a20b97fa.zip/node_modules/@ulixee/hero-interfaces/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-hero-interfaces-npm-2.0.0-alpha.23-ef15189d34-15bc8a8eea.zip/node_modules/@ulixee/hero-interfaces/",\
           "packageDependencies": [\
-            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.23"],\
             ["@ulixee/awaited-dom", "npm:1.4.2"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/js-path", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/js-path", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
             ["devtools-protocol", "npm:0.0.981744"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/hero-plugin-utils", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-hero-plugin-utils-npm-2.0.0-alpha.20-b24d45008b-770ad152d8.zip/node_modules/@ulixee/hero-plugin-utils/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-hero-plugin-utils-npm-2.0.0-alpha.23-d1ac6fa0d4-ff8ff77642.zip/node_modules/@ulixee/hero-plugin-utils/",\
           "packageDependencies": [\
-            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"]\
+            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/hero-timetravel", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-hero-timetravel-npm-2.0.0-alpha.20-b0d9364fd2-589d171422.zip/node_modules/@ulixee/hero-timetravel/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-hero-timetravel-npm-2.0.0-alpha.23-1ef8cc6b8a-5ce2e5215c.zip/node_modules/@ulixee/hero-timetravel/",\
           "packageDependencies": [\
-            ["@ulixee/hero-timetravel", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-core", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-agent", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
-            ["nanoid", "npm:3.3.4"]\
+            ["@ulixee/hero-timetravel", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-core", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-agent", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
+            ["nanoid", "npm:3.3.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -633,26 +671,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ulixee/js-path", "npm:2.0.0-alpha.20"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-js-path-npm-2.0.0-alpha.23-f291dfd9e9-c01a0a8d06.zip/node_modules/@ulixee/js-path/",\
+          "packageDependencies": [\
+            ["@ulixee/js-path", "npm:2.0.0-alpha.23"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/net", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-net-npm-2.0.0-alpha.20-ca6e8d0759-e2aa8d6513.zip/node_modules/@ulixee/net/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-net-npm-2.0.0-alpha.23-68d24c0cba-f2cb245c34.zip/node_modules/@ulixee/net/",\
           "packageDependencies": [\
-            ["@ulixee/net", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["ws", "virtual:ca6e8d0759bf7852cf40307b391c6812192f9ed446167c2cf01419148b97dc6ca8c4cb82be9f726551b9ec70b5159fa51124df2d799a3187457815b15c907060#npm:7.5.9"]\
+            ["@ulixee/net", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["ws", "virtual:68d24c0cba563ee5355ebff18e7ff27257219d3ee3739717abb635de4c2ba66bf30441127c269cc32ed92bbf852f153ecf6bfe879c61b03664379bdd5b8ee176#npm:7.5.9"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/real-user-agents", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-real-user-agents-npm-2.0.0-alpha.20-70edd978ad-d7bb170b70.zip/node_modules/@ulixee/real-user-agents/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-real-user-agents-npm-2.0.0-alpha.23-4329c64d51-e39d3f0aad.zip/node_modules/@ulixee/real-user-agents/",\
           "packageDependencies": [\
-            ["@ulixee/real-user-agents", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/real-user-agents", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
             ["compare-versions", "npm:3.6.0"],\
             ["ua-parser-js", "npm:0.7.35"]\
           ],\
@@ -660,16 +705,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ulixee/unblocked-agent", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-unblocked-agent-npm-2.0.0-alpha.20-bc839cf20d-987ec76ddf.zip/node_modules/@ulixee/unblocked-agent/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-unblocked-agent-npm-2.0.0-alpha.23-6602ef2280-5f9de6c699.zip/node_modules/@ulixee/unblocked-agent/",\
           "packageDependencies": [\
-            ["@ulixee/unblocked-agent", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/chrome-112-0", "npm:5615.138.8"],\
+            ["@ulixee/unblocked-agent", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/chrome-114-0", "npm:5735.134.8"],\
             ["@ulixee/chrome-app", "npm:1.0.3"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/js-path", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-agent-mitm", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/js-path", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-agent-mitm", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
             ["devtools-protocol", "npm:0.0.981744"],\
             ["nanoid", "npm:3.3.6"],\
             ["tough-cookie", "npm:4.1.2"]\
@@ -678,13 +723,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ulixee/unblocked-agent-mitm", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-unblocked-agent-mitm-npm-2.0.0-alpha.20-8cdacb53c5-447aa72b0f.zip/node_modules/@ulixee/unblocked-agent-mitm/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-unblocked-agent-mitm-npm-2.0.0-alpha.23-4b18d6d592-c7672b46eb.zip/node_modules/@ulixee/unblocked-agent-mitm/",\
           "packageDependencies": [\
-            ["@ulixee/unblocked-agent-mitm", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-agent-mitm-socket", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/unblocked-agent-mitm", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-agent-mitm-socket", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
             ["dns-packet", "npm:5.6.0"],\
             ["moment", "npm:2.29.4"]\
           ],\
@@ -692,23 +737,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ulixee/unblocked-agent-mitm-socket", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/unplugged/@ulixee-unblocked-agent-mitm-socket-npm-2.0.0-alpha.20-5bf8412673/node_modules/@ulixee/unblocked-agent-mitm-socket/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/unplugged/@ulixee-unblocked-agent-mitm-socket-npm-2.0.0-alpha.23-4dd80a9cd4/node_modules/@ulixee/unblocked-agent-mitm-socket/",\
           "packageDependencies": [\
-            ["@ulixee/unblocked-agent-mitm-socket", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/commons", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
-            ["nanoid", "npm:3.3.4"]\
+            ["@ulixee/unblocked-agent-mitm-socket", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/commons", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
+            ["nanoid", "npm:3.3.6"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ulixee/unblocked-specification", [\
-        ["npm:2.0.0-alpha.20", {\
-          "packageLocation": "./.yarn/cache/@ulixee-unblocked-specification-npm-2.0.0-alpha.20-bec70c98ee-20bbb1efac.zip/node_modules/@ulixee/unblocked-specification/",\
+        ["npm:2.0.0-alpha.23", {\
+          "packageLocation": "./.yarn/cache/@ulixee-unblocked-specification-npm-2.0.0-alpha.23-d3beefb980-692a7d7e62.zip/node_modules/@ulixee/unblocked-specification/",\
           "packageDependencies": [\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/js-path", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/js-path", "npm:2.0.0-alpha.23"],\
             ["devtools-protocol", "npm:0.0.981744"]\
           ],\
           "linkType": "HARD"\
@@ -945,10 +990,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["better-sqlite3", [\
-        ["npm:8.3.0", {\
-          "packageLocation": "./.yarn/unplugged/better-sqlite3-npm-8.3.0-d1ef3f5776/node_modules/better-sqlite3/",\
+        ["npm:8.4.0", {\
+          "packageLocation": "./.yarn/unplugged/better-sqlite3-npm-8.4.0-168ce4c7b2/node_modules/better-sqlite3/",\
           "packageDependencies": [\
-            ["better-sqlite3", "npm:8.3.0"],\
+            ["better-sqlite3", "npm:8.4.0"],\
             ["bindings", "npm:1.5.0"],\
             ["node-gyp", "npm:9.3.1"],\
             ["prebuild-install", "npm:7.1.1"]\
@@ -1329,6 +1374,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["devtools-protocol", [\
+        ["npm:0.0.1137505", {\
+          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.1137505-602be71245-3f7d701a86.zip/node_modules/devtools-protocol/",\
+          "packageDependencies": [\
+            ["devtools-protocol", "npm:0.0.1137505"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:0.0.981744", {\
           "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.981744-4636a91b0c-609901bff5.zip/node_modules/devtools-protocol/",\
           "packageDependencies": [\
@@ -2378,13 +2430,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hero-plugins", "workspace:."],\
+            ["@types/node", "npm:18.16.19"],\
             ["@typescript-eslint/eslint-plugin", "virtual:49b2612ea94d6295c6332969f4484a9516dc85e12006855e347f044dc1803778635233e5ca8484f2dd4f9df1d1cdfabc7d259e724ca6d12bfba92e117fe3db95#npm:5.59.0"],\
             ["@typescript-eslint/parser", "virtual:49b2612ea94d6295c6332969f4484a9516dc85e12006855e347f044dc1803778635233e5ca8484f2dd4f9df1d1cdfabc7d259e724ca6d12bfba92e117fe3db95#npm:5.59.0"],\
-            ["@ulixee/hero", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-core", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.20"],\
-            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.20"],\
+            ["@ulixee/hero", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-core", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-interfaces", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/hero-plugin-utils", "npm:2.0.0-alpha.23"],\
+            ["@ulixee/unblocked-specification", "npm:2.0.0-alpha.23"],\
             ["eslint", "npm:8.38.0"],\
             ["eslint-import-resolver-typescript", "virtual:49b2612ea94d6295c6332969f4484a9516dc85e12006855e347f044dc1803778635233e5ca8484f2dd4f9df1d1cdfabc7d259e724ca6d12bfba92e117fe3db95#npm:3.5.5"],\
             ["eslint-plugin-import", "virtual:49b2612ea94d6295c6332969f4484a9516dc85e12006855e347f044dc1803778635233e5ca8484f2dd4f9df1d1cdfabc7d259e724ca6d12bfba92e117fe3db95#npm:2.27.5"],\
@@ -3141,13 +3194,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["nanoid", [\
-        ["npm:3.3.4", {\
-          "packageLocation": "./.yarn/cache/nanoid-npm-3.3.4-3d250377d6-2fddd6dee9.zip/node_modules/nanoid/",\
-          "packageDependencies": [\
-            ["nanoid", "npm:3.3.4"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.3.6", {\
           "packageLocation": "./.yarn/cache/nanoid-npm-3.3.6-e6d6ae7e71-7d0eda6570.zip/node_modules/nanoid/",\
           "packageDependencies": [\
@@ -3864,15 +3910,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["source-map-js", [\
-        ["npm:1.0.2", {\
-          "packageLocation": "./.yarn/cache/source-map-js-npm-1.0.2-ee4f9f9b30-c049a7fc4d.zip/node_modules/source-map-js/",\
-          "packageDependencies": [\
-            ["source-map-js", "npm:1.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["ssri", [\
         ["npm:9.0.1", {\
           "packageLocation": "./.yarn/cache/ssri-npm-9.0.1-33ce27f4f8-fb58f5e46b.zip/node_modules/ssri/",\
@@ -4381,10 +4418,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:ca6e8d0759bf7852cf40307b391c6812192f9ed446167c2cf01419148b97dc6ca8c4cb82be9f726551b9ec70b5159fa51124df2d799a3187457815b15c907060#npm:7.5.9", {\
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-f9d87f1e6b/0/cache/ws-npm-7.5.9-26f12a5ed6-c3c100a181.zip/node_modules/ws/",\
+        ["virtual:68d24c0cba563ee5355ebff18e7ff27257219d3ee3739717abb635de4c2ba66bf30441127c269cc32ed92bbf852f153ecf6bfe879c61b03664379bdd5b8ee176#npm:7.5.9", {\
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-87e33c5fe1/0/cache/ws-npm-7.5.9-26f12a5ed6-c3c100a181.zip/node_modules/ws/",\
           "packageDependencies": [\
-            ["ws", "virtual:ca6e8d0759bf7852cf40307b391c6812192f9ed446167c2cf01419148b97dc6ca8c4cb82be9f726551b9ec70b5159fa51124df2d799a3187457815b15c907060#npm:7.5.9"],\
+            ["ws", "virtual:68d24c0cba563ee5355ebff18e7ff27257219d3ee3739717abb635de4c2ba66bf30441127c269cc32ed92bbf852f153ecf6bfe879c61b03664379bdd5b8ee176#npm:7.5.9"],\
             ["@types/bufferutil", null],\
             ["@types/utf-8-validate", null],\
             ["bufferutil", null],\
